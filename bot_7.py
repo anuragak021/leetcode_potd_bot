@@ -9,7 +9,7 @@ def start(update: Update, context: CallbackContext) -> None:
 # Define the command handler for the /POTD command
 def potd(update: Update, context: CallbackContext) -> None:
     # Fetch the LeetCode Problem of the Day
-    respon  se = requests.get('https://leetcode.com/graphql', json={
+    response = requests.get('https://leetcode.com/graphql', json={
         "query": """
         query questionOfToday {
             activeDailyCodingChallengeQuestion {
